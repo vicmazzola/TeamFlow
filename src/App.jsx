@@ -1,8 +1,7 @@
 import './App.css'
-import Banner from "./components/Banner/Banner.jsx";
+import {Banner} from "./components/Banner/Banner.jsx";
 
 function App() {
-
 
     return (
         <>
@@ -10,7 +9,8 @@ function App() {
                 <Banner/>
             </div>
         </>
-    )
+    );
 }
+
 
 export default App
