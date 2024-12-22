@@ -1,6 +1,7 @@
 import './Form.css'
 import TextField from "../TextField/index.jsx";
 import Dropdown from "../Dropdown/index.jsx";
+import Button from "../Button/index.jsx";
 
 const Form = () => {
 
@@ -22,6 +23,7 @@ const Form = () => {
                 <TextField label='Role' placeholder='Type your role'/>
                 <TextField label='Image' placeholder='Provide the image URL'/>
                 <Dropdown label='Team' items={teams}/>
+                <Button text='Create card'/>
             </form>
         </section>
     )
