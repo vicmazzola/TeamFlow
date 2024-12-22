@@ -1,7 +1,19 @@
 import './Form.css'
 import TextField from "../TextField/index.jsx";
+import Dropdown from "../Dropdown/index.jsx";
 
 const Form = () => {
+
+    const teams = [
+        'Back-end',
+        'Front-end',
+        'Data Science',
+        'DevOps',
+        'UX and Design',
+        'Mobile',
+        'Innovation and Management'
+    ];
+
     return (
         <section className='form'>
             <form>
@@ -10,6 +22,7 @@ const Form = () => {
                 <TextField label='Role' placeholder='Type your role'/>
                 <TextField label='Image' placeholder='Provide the image URL'/>
                 <TextField label='Team' placeholder='Type your team'/>
+                <Dropdown items={teams}/>
             </form>
         </section>
     )
