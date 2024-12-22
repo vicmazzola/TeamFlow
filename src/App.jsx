@@ -1,4 +1,5 @@
 import './App.css'
+import './components/Banner/Banner.css'
 import {Banner} from "./components/Banner/Banner.jsx";
 
 function App() {
