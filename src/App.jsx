@@ -8,7 +8,10 @@ function App() {
         <>
             <div>
                 <Banner/>
-                <TextField/>
+                <TextField label='Name' placeholder='Type your name'/>
+                <TextField label='Role' placeholder='Type your role'/>
+                <TextField label='Image' placeholder='Provide the image URL'/>
+                <TextField label='Team' placeholder='Type your team'/>
             </div>
         </>
     );
