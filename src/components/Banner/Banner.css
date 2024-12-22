@@ -11,3 +11,16 @@
     display: block;
     margin: 0 auto;
 }
+
+
+@media (max-width: 768px) {
+    .banner img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner img {
+        width: 95%;
+    }
+}
