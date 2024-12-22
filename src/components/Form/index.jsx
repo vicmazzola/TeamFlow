@@ -15,14 +15,19 @@ const Form = () => {
         'Innovation and Management'
     ];
 
+    const whenSaving = (event) => {
+        event.preventDefault()
+        console.log('Form submitted');
+    }
+
     return (
         <section className='form'>
-            <form>
+            <form onSubmit={whenSaving}>
                 <h2>Fill in the information to create the collaborator card. </h2>
-                <TextField label='Name' placeholder='Type your name'/>
-                <TextField label='Role' placeholder='Type your role'/>
+                <TextField required={true} label='Name' placeholder='Type your name'/>
+                <TextField required={true} label='Role' placeholder='Type your role'/>
                 <TextField label='Image' placeholder='Provide the image URL'/>
-                <Dropdown label='Team' items={teams}/>
+                <Dropdown required={true} label='Team' items={teams}/>
                 <Button>Create Card</Button>
             </form>
         </section>
