@@ -1,11 +1,13 @@
 .banner {
     text-align: center;
     width: 100%;
-    height: auto;
+    background-color: #24252C;
 }
 
 .banner img {
-    width: 100%;
+    width: 45%;
+    max-width: 100%;
     height: auto;
     display: block;
+    margin: 0 auto;
 }
