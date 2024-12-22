@@ -1,6 +1,6 @@
 export function Banner () {
     return (
-        <img src"" />
+        <img src="/img/banner.png" alt="Banner" />
     )
 }
 
