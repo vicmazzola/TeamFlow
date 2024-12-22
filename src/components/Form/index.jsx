@@ -21,7 +21,6 @@ const Form = () => {
                 <TextField label='Name' placeholder='Type your name'/>
                 <TextField label='Role' placeholder='Type your role'/>
                 <TextField label='Image' placeholder='Provide the image URL'/>
-                <TextField label='Team' placeholder='Type your team'/>
                 <Dropdown items={teams}/>
             </form>
         </section>
