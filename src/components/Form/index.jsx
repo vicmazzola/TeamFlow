@@ -23,7 +23,7 @@ const Form = () => {
                 <TextField label='Role' placeholder='Type your role'/>
                 <TextField label='Image' placeholder='Provide the image URL'/>
                 <Dropdown label='Team' items={teams}/>
-                <Button text='Create card'/>
+                <Button>Create Card</Button>
             </form>
         </section>
     )
