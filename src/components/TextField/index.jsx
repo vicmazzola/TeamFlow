@@ -1,12 +1,19 @@
 import './TextField.css'
+import {useState} from "react";
 
 const TextField = (props) => {
+
+
+    const whenType = (event) => {
+        props.whenChanged(event.target.value)
+    }
+
     return (
         <div className='text-field'>
             <label>
                 {props.label}
             </label>
-            <input required={props.required} placeholder={props.placeholder}/>
+            <input value={props.value} onChange={whenType} required={props.required} placeholder={props.placeholder}/>
         </div>
 
     )
