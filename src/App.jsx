@@ -9,6 +9,7 @@ function App() {
 
     const newCollaborator = (collaborator) => {
         console.log(collaborator)
+        setCollaborators([...collaborators, collaborator])
 
     }
 
