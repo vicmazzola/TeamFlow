@@ -4,7 +4,7 @@ import Dropdown from "../Dropdown/index.jsx";
 import Button from "../Button/index.jsx";
 import {useState} from "react";
 
-const Form = () => {
+const Form = (props) => {
 
     const teams = [
         'Back-end',
@@ -23,7 +23,12 @@ const Form = () => {
 
     const whenSaving = (event) => {
         event.preventDefault()
-        console.log('Form submitted => ', name, role ,image, team);
+        props.collaboratorRegistered({
+            name,
+            role,
+            image,
+            team
+        })
     }
 
     return (
