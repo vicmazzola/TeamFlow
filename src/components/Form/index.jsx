@@ -19,10 +19,11 @@ const Form = () => {
     const [name,setName] = useState('');
     const [role, setRole] = useState('');
     const [image, setImage] = useState('');
+    const [team, setTeam] = useState('');
 
     const whenSaving = (event) => {
         event.preventDefault()
-        console.log('Form submitted => ', name, role ,image);
+        console.log('Form submitted => ', name, role ,image, team);
     }
 
     return (
@@ -49,7 +50,14 @@ const Form = () => {
                     value={image}
                     whenChanged={value => setImage(value)}
                 />
-                <Dropdown required={true} label='Team' items={teams}/>
+                <Dropdown
+                    required={true}
+                    label='Team'
+                    items={teams}
+                    value={team}
+                    whenChanged={value => setTeam(value)}
+
+                />
                 <Button>Create Card</Button>
             </form>
         </section>
