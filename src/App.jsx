@@ -6,6 +6,45 @@ import {useState} from "react";
 
 function App() {
 
+    const teams = [
+        {
+            name: 'Back-end',
+            primaryColor: '#57C278',
+            secondaryColor: '#D9F7E9',
+        },
+        {
+            name: 'Front-End',
+            primaryColor: '#82CFFA',
+            secondaryColor: '#E8F8FF',
+        },
+        {
+            name: 'Data Science',
+            primaryColor: '#A6D157',
+            secondaryColor: '#F0F8E2',
+        },
+        {
+            name: 'DevOps',
+            primaryColor: '#E06B69',
+            secondaryColor: '#FDE7E8',
+        },
+        {
+            name: 'UX and Design',
+            primaryColor: '#D86EBF',
+            secondaryColor: '#FAE5F5',
+        },
+        {
+            name: 'Mobile',
+            primaryColor: '#FEBA05',
+            secondaryColor: '#FFF5D9',
+        },
+        {
+            name: 'Innovation and Management',
+            primaryColor: '#FF8A29',
+            secondaryColor: '#FFEEDF',
+        }
+
+    ]
+
     const [collaborators, setCollaborators] = useState([]);
 
     const newCollaborator = (collaborator) => {
@@ -19,13 +58,9 @@ function App() {
             <div>
                 <Banner/>
                 <Form collaboratorRegistered={collaborator => newCollaborator(collaborator)}/>
-                <Team name='Back-end'/>
-                <Team name='Front-end'/>
-                <Team name='Data Science'/>
-                <Team name='DevOps'/>
-                <Team name='UX and Design'/>
-                <Team name='Mobile'/>
-                <Team name='Innovation and Management'/>
+
+                {teams.map(team => <Team name={team.name}/>)}
+
             </div>
         </>
     );

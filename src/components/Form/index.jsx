@@ -16,7 +16,7 @@ const Form = (props) => {
         'Innovation and Management'
     ];
 
-    const [name,setName] = useState('');
+    const [name, setName] = useState('');
     const [role, setRole] = useState('');
     const [image, setImage] = useState('');
     const [team, setTeam] = useState('');
