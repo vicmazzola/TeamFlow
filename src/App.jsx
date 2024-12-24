@@ -3,6 +3,7 @@ import {Banner} from "./components/Banner/index.jsx";
 import Form from "./components/Form/index.jsx";
 import Team from "./components/Team/index.jsx";
 import {useState} from "react";
+import {Footer} from "./components/Footer/index.jsx";
 
 function App() {
 
@@ -48,7 +49,6 @@ function App() {
     const [collaborators, setCollaborators] = useState([]);
 
     const newCollaborator = (collaborator) => {
-        console.log(collaborator)
         setCollaborators([...collaborators, collaborator])
 
     }
@@ -67,6 +67,8 @@ function App() {
                         secondaryColor={team.secondaryColor}
                         collaborators={collaborators.filter(collaborator => collaborator.team === team.name)}
                     />)}
+
+                <Footer/>
 
             </div>
         </>
