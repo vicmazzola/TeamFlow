@@ -57,7 +57,7 @@ function App() {
         <>
             <div>
                 <Banner/>
-                <Form collaboratorRegistered={collaborator => newCollaborator(collaborator)}/>
+                <Form teams={teams.map(team  => team.name)} collaboratorRegistered={collaborator => newCollaborator(collaborator)}/>
 
                 {teams.map(team =>
                     <Team

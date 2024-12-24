@@ -6,16 +6,6 @@ import {useState} from "react";
 
 const Form = (props) => {
 
-    const teams = [
-        'Back-end',
-        'Front-end',
-        'Data Science',
-        'DevOps',
-        'UX and Design',
-        'Mobile',
-        'Innovation and Management'
-    ];
-
     const [name, setName] = useState('');
     const [role, setRole] = useState('');
     const [image, setImage] = useState('');
@@ -58,7 +48,7 @@ const Form = (props) => {
                 <Dropdown
                     required={true}
                     label='Team'
-                    items={teams}
+                    items={props.teams}
                     value={team}
                     whenChanged={value => setTeam(value)}
 
