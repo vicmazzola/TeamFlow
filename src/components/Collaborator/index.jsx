@@ -4,7 +4,7 @@ const Collaborator = () => {
     return (
         <div className="collaborator">
             <div>
-                <img src'http://github.com/vicmazzola.png' alt'Victor Mazzola user Gihutb'/>
+                <img src='https://github.com/vicmazzola.png' alt='Victor Mazzola user Gihutb'/>
 
             </div>
             <div>
