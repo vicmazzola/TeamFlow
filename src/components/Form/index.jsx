@@ -13,6 +13,12 @@ const Form = (props) => {
 
     const whenSaving = (event) => {
         event.preventDefault()
+        console.log({
+            name,
+            role,
+            image,
+            team, // Verifique se esse valor está correto
+        });
         props.collaboratorRegistered({
             name,
             role,
