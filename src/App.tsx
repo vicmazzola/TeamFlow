@@ -1,10 +1,11 @@
 import './components/Banner/Banner.css'
-import Form from "./components/Form/index.tsx";
-import Team from "./components/Team/index.tsx";
+import Form from "./components/Form";
+import Team from "./components/Team";
 import {useState} from "react";
-import {Footer} from "./components/Footer/index.jsx";
+import {Footer} from "./components/Footer";
 
 import Banner from "./components/Banner";
+import {ICollaborator} from "./shared/interfaces/ICollaborator";
 
 function App() {
 
@@ -47,9 +48,9 @@ function App() {
 
     ]
 
-    const [collaborators, setCollaborators] = useState([]);
+    const [collaborators, setCollaborators] = useState<ICollaborator[]>([]);
 
-    const newCollaborator = (collaborator) => {
+    const newCollaborator = (collaborator: ICollaborator) => {
         setCollaborators([...collaborators, collaborator])
 
     }
@@ -61,7 +62,8 @@ function App() {
                 <Form teams={teams.map(team => team.name)}
                       collaboratorRegistered={collaborator => newCollaborator(collaborator)}/>
 
-                {teams.map(team => <Team
+                {teams.map(team =>
+                    <Team
                         key={team.name}
                         name={team.name}
                         primaryColor={team.primaryColor}

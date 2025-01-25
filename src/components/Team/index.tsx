@@ -7,18 +7,18 @@ interface TeamProps {
     secondaryColor: string;
     name: string;
     collaborators: ICollaborator[];
-    onColorChange: (color: string, name: string) => void;
-    onDelete: (name: string) => void;
+    onColorChange?: (color: string, name: string) => void;
+    onDelete?: (name: string) => void;
 
 }
 
 const Team = (props: TeamProps) => {
+    const css = {backgroundColor: props.secondaryColor}
+
+
     return (
-        props.collaborators.length > 0 ? (
-            <section
-                className="team"
-                style={{backgroundColor: props.secondaryColor}}
-            >
+        (props.collaborators.length > 0) ?
+            <section className='time' style={css}>
 
                 {props.onColorChange && (
                     <input
@@ -49,9 +49,9 @@ const Team = (props: TeamProps) => {
                     ))}
                 </div>
             </section>
-        ) : (
-            <></>
-        )
+            : (
+                <></>
+            )
     );
 };
 
