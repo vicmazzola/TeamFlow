@@ -18,7 +18,7 @@ const Team = (props: TeamProps) => {
 
     return (
         (props.collaborators.length > 0) ?
-            <section className='time' style={css}>
+            <section className='team' style={css}>
 
                 {props.onColorChange && (
                     <input
