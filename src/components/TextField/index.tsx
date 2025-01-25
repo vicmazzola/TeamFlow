@@ -5,11 +5,11 @@ interface TextFieldProps {
     label: string;
     value: string;
     whenChanged: (value: string) => void;
-    required: boolean;
+    required?: boolean;
     placeholder: string;
 }
 
-const TextField = ({whenChanged, placeholder, value, required, label}: TextFieldProps) => {
+const TextField = ({whenChanged, placeholder, value, label, required = false}: TextFieldProps) => {
 
 
     const whenType = (event: React.ChangeEvent<HTMLInputElement>) => {

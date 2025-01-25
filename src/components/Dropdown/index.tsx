@@ -5,7 +5,7 @@ interface DropdownProps {
     items: string[];
     value: string;
     whenChanged: (value: string) => void;
-    required?: boolean;
+    required: boolean;
 }
 
 const Dropdown = (props: DropdownProps) => {

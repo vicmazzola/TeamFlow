@@ -1,5 +1,5 @@
 import './components/Banner/Banner.css'
-import Form from "./components/Form/index.jsx";
+import Form from "./components/Form/index.tsx";
 import Team from "./components/Team/index.tsx";
 import {useState} from "react";
 import {Footer} from "./components/Footer/index.jsx";
