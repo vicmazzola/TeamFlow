@@ -9,23 +9,23 @@ interface TextFieldProps {
     placeholder: string;
 }
 
-const TextField = (props: TextFieldProps) => {
+const TextField = ({whenChanged, placeholder, value, required, label}: TextFieldProps) => {
 
 
     const whenType = (event: React.ChangeEvent<HTMLInputElement>) => {
-        props.whenChanged(event.target.value)
+        whenChanged(event.target.value)
     }
 
     return (
         <div className='text-field'>
             <label>
-                {props.label}
+                {label}
             </label>
             <input
-                value={props.value}
-                onChange={event => whenType}
-                required={props.required}
-                placeholder={props.placeholder}
+                value={value}
+                onChange={whenType}
+                required={required}
+                placeholder={placeholder}
             />
         </div>
 
