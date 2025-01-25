@@ -1,7 +1,7 @@
 import './Form.css'
 import TextField from "../TextField/index.jsx";
 import Dropdown from "../Dropdown/index.jsx";
-import Button from "../Button/index.jsx";
+import Button from "../Button/index.tsx";
 import {useState} from "react";
 
 const Form = (props) => {
@@ -17,7 +17,7 @@ const Form = (props) => {
             name,
             role,
             image,
-            team, // Verifique se esse valor está correto
+            team,
         });
         props.collaboratorRegistered({
             name,
