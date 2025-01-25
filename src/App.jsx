@@ -1,9 +1,10 @@
 import './components/Banner/Banner.css'
-import {Banner} from "./components/Banner/index.jsx";
 import Form from "./components/Form/index.jsx";
 import Team from "./components/Team/index.jsx";
 import {useState} from "react";
 import {Footer} from "./components/Footer/index.jsx";
+
+import Banner from "./components/Banner";
 
 function App() {
 
@@ -56,7 +57,7 @@ function App() {
     return (
         <>
             <div className='App'>
-                <Banner/>
+                <Banner imgSrc="/img/banner.png"/>
                 <Form teams={teams.map(team => team.name)}
                       collaboratorRegistered={collaborator => newCollaborator(collaborator)}/>
 
