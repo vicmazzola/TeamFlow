@@ -1,6 +1,6 @@
 import './Form.css'
 import TextField from "../TextField/index.tsx";
-import Dropdown from "../Dropdown/index.jsx";
+import Dropdown from "../Dropdown/index.tsx";
 import Button from "../Button/index.tsx";
 import {useState} from "react";
 
