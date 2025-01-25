@@ -1,6 +1,6 @@
 import './components/Banner/Banner.css'
 import Form from "./components/Form/index.jsx";
-import Team from "./components/Team/index.jsx";
+import Team from "./components/Team/index.tsx";
 import {useState} from "react";
 import {Footer} from "./components/Footer/index.jsx";
 
