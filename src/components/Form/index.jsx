@@ -1,5 +1,5 @@
 import './Form.css'
-import TextField from "../TextField/index.jsx";
+import TextField from "../TextField/index.tsx";
 import Dropdown from "../Dropdown/index.jsx";
 import Button from "../Button/index.tsx";
 import {useState} from "react";
