@@ -17,6 +17,7 @@ const Form = (props: FormProps) => {
     const [role, setRole] = useState('');
     const [image, setImage] = useState('');
     const [team, setTeam] = useState('');
+    const [date, setDate] = useState('');
 
     const whenSaving = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
@@ -24,12 +25,14 @@ const Form = (props: FormProps) => {
             name,
             role,
             image,
-            team
+            team,
+            date
         })
         setName('')
         setRole('')
         setImage('')
         setTeam('')
+        setDate('')
     }
 
     return (
@@ -55,6 +58,14 @@ const Form = (props: FormProps) => {
                     placeholder='Provide the image URL'
                     value={image}
                     whenChanged={value => setImage(value)}
+                />
+                <TextField
+                    type="date"
+                    required={true}
+                    label="Entrance date on team"
+                    placeholder=""
+                    value={date}
+                    whenChanged={value => setDate(value)}
                 />
                 <Dropdown
                     required={true}

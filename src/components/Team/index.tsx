@@ -43,6 +43,7 @@ const Team = (props: TeamProps) => {
                             name={collaborator.name}
                             role={collaborator.role}
                             image={collaborator.image}
+                            date={collaborator.date}
                             backgroundColor={props.primaryColor}
                             onDelete={props.onDelete}
                         />

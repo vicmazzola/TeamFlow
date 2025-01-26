@@ -5,6 +5,7 @@ interface CollaboratorProps {
     image: string;
     role: string;
     backgroundColor: string;
+    date: string;
     onDelete?: (name: string) => void;
 
 
@@ -20,6 +21,7 @@ const Collaborator = (props: CollaboratorProps) => {
             <div className='footer'>
                 <h4>{props.name}</h4>
                 <h5>{props.role}</h5>
+                <h5>{new Date(props.date).toLocaleDateString()}</h5>
             </div>
         </div>
     )
