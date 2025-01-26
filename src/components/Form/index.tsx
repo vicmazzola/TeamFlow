@@ -1,24 +1,25 @@
 import './Form.css'
-import TextField from "../TextField/index.jsx";
-import Dropdown from "../Dropdown/index.jsx";
-import Button from "../Button/index.jsx";
+import TextField from "../TextField";
+import Dropdown from "../Dropdown";
+import Button from "../Button";
 import {useState} from "react";
+import {ICollaborator} from "../../shared/interfaces/ICollaborator";
 
-const Form = (props) => {
+interface FormProps {
+    collaboratorRegistered: (collaborator: ICollaborator) => void;
+    teams: string[];
+}
+
+
+const Form = (props: FormProps) => {
 
     const [name, setName] = useState('');
     const [role, setRole] = useState('');
     const [image, setImage] = useState('');
     const [team, setTeam] = useState('');
 
-    const whenSaving = (event) => {
+    const whenSaving = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
-        console.log({
-            name,
-            role,
-            image,
-            team, // Verifique se esse valor está correto
-        });
         props.collaboratorRegistered({
             name,
             role,
@@ -63,7 +64,9 @@ const Form = (props) => {
                     whenChanged={value => setTeam(value)}
 
                 />
-                <Button>Create Card</Button>
+                <Button>
+                    Create Card
+                </Button>
             </form>
         </section>
     )
