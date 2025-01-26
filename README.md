@@ -16,6 +16,8 @@ Explore the live application at: [TeamFlow](https://team-flow-tan.vercel.app/)
 - State management using the **useState** hook.
 - React's reactivity and rendering pipeline.
 - Full deployment pipeline using **Vercel**.
+- The project was later converted to **TypeScript**, enhancing type safety, maintainability, and developer experience.
+
 
 ## 🧑‍💻 Course Content
 This project implements the following key concepts from the course:
@@ -28,7 +30,8 @@ This project implements the following key concepts from the course:
 ## ✔️ Technologies Used
 - **React**: For building the user interface.
 - **Vite**: For blazing-fast development and efficient builds.
-- **JavaScript**: For implementing interactivity and logic.
+- **JavaScript**: Initially used for implementing interactivity and logic.
+- **TypeScript**: Later introduced to enhance type safety and maintainability.
 - **CSS**: For styling and responsive design.
 
 ## 📂 Project Structure
