@@ -61,6 +61,25 @@ This project implements the following key concepts from the course:
 ├── vite.config.js            # Vite configuration file
 ```
 
+## Installation
+To run this project locally:
+
+1. Clone the repository and navigate to the project directory:
+   ```sh
+   git clone https://github.com/vicmazzola/TeamFlow.git
+   cd TeamFlow
+   ```
+
+2. Install dependencies:
+```
+npm install
+```
+3. Start the development server:
+```
+npm run dev
+```
+
+
 ## 🚀 Deployment
 The project was deployed using **Vercel**, ensuring fast and reliable hosting.
 
